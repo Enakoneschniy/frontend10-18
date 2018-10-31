@@ -1,0 +1,80 @@
+li {
+    width: 200px;
+    height: 150px;
+    background: gray;
+    border: 1px solid darkred;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+li.fl {
+    float: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.example {
+    width: 200px;
+    height: 200px;
+    background: gray;
+    border: 1px solid green;
+    transition: all .2s ease;
+}
+
+.example:hover {
+    transform: rotate(240deg);
+
+}
+
+.rotate45 {
+    transform: rotate(45deg);
+}
+
+.absolute {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.static {
+    position: static !important;
+}
+
+.fixed {
+    position: fixed !important;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+    top: 10px;
+    left: 10px;
+    width: 280px;
+    height: 380px;
+    color: white;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .5s ease ;
+}
