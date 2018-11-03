@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.product {
+    display: inline-block;
+    width: 49%;
+    height: 200px;
+    background: gray;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .product {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .product {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
