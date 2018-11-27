@@ -47,6 +47,7 @@
         lastName: 'Pupkin',
         age: 23,
         fullName() {
+
             const upper = () => {
                 return `${ this.firstName.toUpperCase() } ${ this.lastName.toUpperCase() }`;
             };
@@ -58,6 +59,71 @@
     };
     console.log(user.fullName());
 
+    function Cat({ name, color, gender }) {
+        let age = 0;
+        return {
+            name,
+            color,
+            getGender() {
+                return gender;
+            },
+            setName(value) {
+                this.name = value;
+            },
+            getAge() {
+                return age;
+            }
+        };
+
+    }
+
+    function Dog() {
+
+    }
+
+    let byte = new Cat({ name: 'Пушистик', color: 'yellow', gender: 'male' });
+    let sharik = new Dog();
+    console.log(byte);
+
+    byte.name = 'Мурка';
+    console.log(byte);
+    console.log(byte.gender);
+    console.log(byte);
+    console.log(byte.getGender());
+    console.log(sharik);
+
+
+
+    function Basket() {
+        const items = [];
+        return { add, remove, show };
+
+        function toJSON(items) {
+            return JSON.stringify(items)
+        }
+        function show() {
+            console.log(toJSON(items));
+        }
+        function add(product) {
+            items.push(product);
+        }
+        function remove(id) {
+            // to do
+        }
+    }
+
+    const basket = new Basket();
+    console.log(basket);
+
+    basket.add({
+        title: 'Phone 1'
+    });
+    basket.show();
+
+    basket.add({
+        title: 'Phone 2'
+    });
+    basket.show();
 })();
 
 
