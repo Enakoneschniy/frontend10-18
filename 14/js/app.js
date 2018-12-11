@@ -26,4 +26,47 @@
         }
     });
 
+     function factorial(num) {
+         if (num <= 1) {
+             return 1;
+         }
+         return num * factorial(num - 1);
+     }
+
+    console.log(factorial(5));
+
+     function a() {
+         b();
+     }
+     function b() {
+         a();
+     }
+     const nodes = [
+         {
+             name: 'fold1',
+             files: [],
+             dirs: [
+                 {
+                     name: 'fold2',
+                     files: [],
+                     dirs: []
+                 }
+             ]
+         },
+         {
+             name: 'fold1',
+             files: [],
+             dirs: [
+                 {
+                     name: 'fold2',
+                     files: [],
+                     dirs: []
+                 }
+             ]
+         }
+     ];
+
+    function sum(num) { //1234
+        // return 10;
+    }
 })();
